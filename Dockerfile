@@ -1,13 +1,6 @@
-FROM ubuntu:14.04
+FROM ubuntu:18.04
 
 LABEL maintainer "Andreas Fertig"
-
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends ca-certificates gnupg
-
-RUN echo "deb http://ppa.launchpad.net/ubuntu-toolchain-r/test/ubuntu trusty main" >> /etc/apt/sources.list
-
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1E9377A2BA9EF27F
 
 RUN apt-get update && apt-get install -y --no-install-recommends libstdc++-7-dev
 
