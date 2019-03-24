@@ -4,10 +4,10 @@ LABEL maintainer "Andreas Fertig"
 
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates gnupg wget
 
-RUN echo "deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-7 main" >> /etc/apt/sources.list
+RUN echo "deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-8 main" >> /etc/apt/sources.list
 RUN wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add -
 
-RUN apt-get update && apt-get install -y --no-install-recommends libstdc++-7-dev libclang-7-dev && apt-get clean
+RUN apt-get update && apt-get install -y --no-install-recommends libstdc++-7-dev libclang-8-dev && apt-get clean
 
 RUN useradd insights \
     && mkdir /home/insights \

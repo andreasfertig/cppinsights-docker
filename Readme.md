@@ -23,7 +23,7 @@ This will download the latest [C++ Insights](https://cppinsights.io) binary and 
 ## Usage
 
 ```
-cat <YOUR_CPP_FILE> | docker run -i cppinsights-trusty /usr/bin/insights -stdin x.cpp -- -std=c++17
+cat <YOUR_CPP_FILE> | docker run --rm -i cppinsights-trusty /usr/bin/insights -stdin x.cpp -- -std=c++17
 ```
 
 or
